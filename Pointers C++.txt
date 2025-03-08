@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string names[] = {"Carniatas", "Pollo", "Veggie"};
+    float prices[] = {6.95, 6.25, 5.95};
+    string *ptr = names;
+    float *floatptr = prices;
+    
+    cout << "The new menu and prices for this Taqueria now includes: " << endl;
+    for(int i=0; i<3; i++){
+        ptr[i] += " Especial";
+    }
+    
+    for(int i=0; i<3; i++){
+        floatptr[i] += 10.00;
+    }
+    
+    for(int i=0; i<3; i++){
+        cout << ptr[i] << ": " << "$" << floatptr[i] <<endl;
+    }
+    
+
+    return 0;
+}
